@@ -2,9 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/out-tsc/server.js",
+    "dev": "nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +16,9 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "stripe": "^12.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "typescript": "^5.2.2"
   }
 }

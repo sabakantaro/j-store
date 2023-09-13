@@ -1,18 +1,10 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
+
 dotenv.config();
 
-const app = express();
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(cors({ origin: true, credentials: true }));
+const stripe = require("stripe")(process.env["STRIPE_SECRET_KEY"]);
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-
-app.post("/checkout", async (req, res, next) => {
+exports.createCheckoutSession = async (req: any, res: any, next: any) => {
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -61,7 +53,7 @@ app.post("/checkout", async (req, res, next) => {
           },
         },
       ],
-      line_items: req.body.items.map((item) => ({
+      line_items: req.body.items.map((item: any) => ({
         price_data: {
           currency: "cad",
           product_data: {
@@ -73,13 +65,11 @@ app.post("/checkout", async (req, res, next) => {
         quantity: item.quantity,
       })),
       mode: "payment",
-      success_url: process.env.API_URL + "/success.html",
-      cancel_url: process.env.API_URL + "/cancel.html",
+      success_url: process.env["API_URL"] + "/success.html",
+      cancel_url: process.env["API_URL"] + "/cancel.html",
     });
     res.status(200).json(session);
   } catch (err) {
     next(err);
   }
-});
-
-app.listen(4242, () => console.log("Running on port 4242"));
+};
