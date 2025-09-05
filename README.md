@@ -1,23 +1,23 @@
-# Welcome to J-Store 🛒
+# [Welcome to J-Store](https://j-store-psi.vercel.app/home)
 
-J-Store is your go-to electronic commerce site, designed to provide you with a seamless online shopping experience. This app is powered by a tech stack that includes HTML, CSS, TypeScript, AngularJS, NodeJS, ExpressJS, and Stripe. Get ready to embark on a shopping journey like never before! 🚀
+Note: I canceled Stripe payment plan. So, The payment feature would not work so far.
 
-## Features 🌟
+J-Store is your go-to electronic commerce site, designed to provide you with a seamless online shopping experience. This app is powered by a tech stack that includes HTML, CSS, TypeScript, AngularJS, NodeJS, ExpressJS, and Stripe. Get ready to embark on a shopping journey like never before.
 
-✅ Browse a wide selection of products
-✅ Add items to your cart
-✅ Securely process payments with Stripe
-✅ Enjoy a user-friendly interface
+## Features
 
-## Tech Stack 💻
+- Browse a wide selection of products
+- Add items to your cart
+- Securely process payments with Stripe
+- Enjoy a user-friendly interface
+
+## Tech Stack
 
 - **Frontend**: HTML, CSS, TypeScript, AngularJS
 - **Backend**: NodeJS, ExpressJS
 - **Payment Processing**: Stripe
 
-## Preview 📸
-
-Here's a sneak peek of what you can expect from J-Store:
+## Preview
 
 ### Home Page
 
@@ -31,7 +31,7 @@ Here's a sneak peek of what you can expect from J-Store:
 
 <img width="1440" alt="Screenshot 2023-09-12 at 18 47 26" src="https://github.com/sabakantaro/j-store/assets/79243411/5b6e5aeb-c12c-4282-b53a-e5c77f8ca1ef">
 
-## Installation and Usage 🚀
+## Installation and Usage
 
 1. Clone this repository.
 2. Navigate to the project directory.
@@ -41,4 +41,4 @@ Here's a sneak peek of what you can expect from J-Store:
 6. Navigate to the server directory with `cd server`.
 7. Start the server with `node server.js`.
 
-Happy Shopping! 🛍️✨
+Happy Shopping!
